@@ -3,6 +3,20 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/2.1.1/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+		<script>
+			$(document).ready(function(){
+			  $("#error").click(function(){
+				  $("body").addClass("error");
+				  $("img").remove();
+			  });
+			  $("#back").click(function(){
+				  location.reload();
+			  });
+			});
+		</script>
 		<title>Aurora | Web</title>
 	</head>
 	<body>
@@ -10,8 +24,8 @@
 		<div style="text-align:left;width:1250px;height:50px;">
 　			<div style="width:750px;margin:0 auto;">
 
-				<h1>極光 Aurora</h1>
-
+				<h1 class="text-primary">極光 Aurora</h1>
+				
 				<img width="750px", src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2018/05/18/2/4771260.jpg&s=Y&x=0&y=22&sw=1279&sh=719&sl=W&fw=650&exp=3600&exp=3600" alt="Aurora pic">
 
 				<h2>介紹</h2>
@@ -39,8 +53,10 @@
 					<label><input type="radio" name="yes-no" checked> 想</label>
 					<label><input type="radio" name="yes-no"> 不想</label><br>
 					<input type="text" placeholder="為什麼...">
-					<button type="submit">提交</button>
+					<button type="submit" class="btn btn-primary">提交</button>
 				</form>
+				<button id="error" type="button" class="btn btn-danger">不要按錯喔</button>
+				<button id="back" type="button" class="btn-link">恢復原狀</button><br>
 
 				<h2>參考資料</h2>
 				<p>維基百科: <a href="https://zh.wikipedia.org/wiki/%E6%9E%81%E5%85%89">點此前往</a></p>
@@ -52,9 +68,6 @@
  </body>
 </html>
 
-
-
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 <style>
   .red-text {
     color: red;
@@ -76,6 +89,10 @@
     background-color: black;
   }
 
+  .error {
+	background-color: white;
+  }
+
   h1 {
     font-family: Lobster, monospace;
 	text-align: center;
@@ -84,10 +101,11 @@
 
   h2 {
     color: #33cc99;
+	font-size: 25px;
   }
 
   p {
-    font-size: 16px;
+    font-size: 18px;
     font-family: monospace;
 	color: white;
   }
@@ -121,6 +139,7 @@
     color: white;
   }
 
-
+  .btn-link{color: black;}
 
 </style>
+
