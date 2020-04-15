@@ -10,7 +10,8 @@
 			$(document).ready(function(){
 			  $("#error").click(function(){
 				  $("body").addClass("error");
-				  $("img").remove();
+				  $("img, p, b, h2, ul, form").remove();
+				  $('#errpic').append('<img id="grimace" src="https://c-ssl.duitang.com/uploads/item/201407/25/20140725213728_GwRCa.thumb.700_0.jpeg" />')
 			  });
 			  $("#back").click(function(){
 				  location.reload();
@@ -26,7 +27,9 @@
 
 				<h1 class="text-primary">極光 Aurora</h1>
 				
-				<img width="750px", src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2018/05/18/2/4771260.jpg&s=Y&x=0&y=22&sw=1279&sh=719&sl=W&fw=650&exp=3600&exp=3600" alt="Aurora pic">
+				<div id = "errpic">
+					<img width="750px"  src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2018/05/18/2/4771260.jpg&s=Y&x=0&y=22&sw=1279&sh=719&sl=W&fw=650&exp=3600&exp=3600" alt="Aurora pic">
+				</div>
 
 				<h2>介紹</h2>
 				<p>
